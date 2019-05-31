@@ -38,11 +38,17 @@ _Contact Svitlana Filatova at svitlana.filatova@gmail.com._
 ## Technologies Used
 
 _JavaScript_
+
 _Jasmine_
+
 _Karma_
+
 _ES6_
+
 _Webpack_
+
 _Eslinter_
+
 
 ### License
 
