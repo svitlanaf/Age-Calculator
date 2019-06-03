@@ -30,7 +30,7 @@ _This web application calculates user's age in solar years on different planets.
 
 ## Known Bugs / Limitations
 
-* _No known bugs found during testing_.
+* _If user birthdate is not selected an application works and returns NaN as a result._
 
 ## Support and contact details
 
@@ -38,23 +38,7 @@ _Contact Svitlana Filatova at svitlana.filatova@gmail.com._
 
 ## Technologies Used
 
-_JavaScript_
-
-_Jasmine_
-
-_Karma_
-
-_ES6_
-
-_Webpack_
-
-_Eslinter_
-
-_HTML_
-
-_CSS_
-
-_Bootstrap_
+_JavaScript, Jasmine, Karma, ES6, Webpack, Eslinter, HTML, CSS, Bootstrap._
 
 
 

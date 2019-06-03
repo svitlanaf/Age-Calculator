@@ -4,10 +4,12 @@ describe('SolarAgeCalculator', function() {
     var reusableBirthdate;
 
     beforeEach(function() {
-        reusableBirthdate = new SolarAgeCalculator('1999-06-02');
+        reusableBirthdate = new SolarAgeCalculator('05/14/2001');
     });
 
-    it('should test if user solution is not valid', function() {
-        var userSudokuSolver = new Sudoku('136789214189234675427615398213597846695841732874326951958472163361958427742163589');
-        expect(userSudokuSolver.sudokuChecker(this.allNums)).toEqual(false);
+    it('should return the correct user age on Earth' , function() {
+        var ageOnEarth = SolarAgeCalculator.calculateAge("Earth");
+        let expected = 18;
+        expect(ageOnEarth).toEqual(expected);
     });
+})
