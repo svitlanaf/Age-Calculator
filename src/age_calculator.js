@@ -1,38 +1,26 @@
 export class SolarAgeCalculator {
     constructor(birthdate) {
         this.birthdate = new Date(birthdate);
-        this.age = this.earthAge();
     }
 
-    earthAge() {
+    calculatedAge(planet) {
         let currentDate = new Date().getFullYear();
         let birthdate = this.birthdate.getFullYear();
-        let earthAge = currentDate - birthdate;
-        return earthAge;
-    }
+        let planetFactor;
+        if (planet == "Earth") {
+            planetFactor = 1;
+        } else if (planet == "Mercury") {
+            planetFactor = 0.24;
+        } else if (planet == "Venus") {
+            planetFactor = 0.62;
+        } else if (planet == "Mars") {
+            planetFactor = 1.88;
+        } else if (planet == "Jupiter") {
+            planetFactor = 11.86;
+        }
 
-    mercuryAge() {
-        let age = this.age;
-        let mercuryAge = Math.floor(age/0.24);
-        return mercuryAge;
-    }
-
-    venusAge() {
-        let age = this.age;
-        let venusAge = Math.floor(age/0.62);
-        return venusAge;
-    }
-
-    marsAge() {
-        let age = this.age;
-        let marsAge = Math.floor(age/1.88);
-        return marsAge;
-    }
-
-    jupiterAge() {
-        let age = this.age;
-        let jupiterAge = Math.floor(age/11.86);
-        return jupiterAge;
+        let calculatedAge = (currentDate - birthdate)/planetFactor;
+        return Math.floor(calculatedAge);
     }
 
 
@@ -46,9 +34,9 @@ export class SolarAgeCalculator {
         }
 
         let continentFactor;
-        if (continent == "Australia" || continent == "North America") {
+        if (continent == "Australia" || continent == "NA") {
             continentFactor = 1.18;
-        } else if (continent == "Asia" || continent == "South America") {
+        } else if (continent == "Asia" || continent == "SA") {
             continentFactor = 1.09;
         } else if (continent == "Europe") {
             continentFactor = 1.05;

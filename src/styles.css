@@ -13,3 +13,9 @@ body {
     width: 300px;
   }
 
+  #answer-panel-.panel {
+    margin-top: 30px;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+  }
