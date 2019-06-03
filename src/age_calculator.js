@@ -1,38 +1,74 @@
-export class SolarYearsCalculator {
+export class SolarAgeCalculator {
     constructor(birthdate) {
         this.birthdate = new Date(birthdate);
-        this.years = this.earthYears();
-
+        this.age = this.earthAge();
     }
 
-    earthYears() {
+    earthAge() {
         let currentDate = new Date().getFullYear();
         let birthdate = this.birthdate.getFullYear();
-        let earthYears = currentDate - birthdate;
-        return earthYears;
+        let earthAge = currentDate - birthdate;
+        return earthAge;
     }
 
-    mercuryYears() {
-        let years = this.years;
-        let mercuryYears = Math.floor(years/0.24);
-        return mercuryYears;
+    mercuryAge() {
+        let age = this.age;
+        let mercuryAge = Math.floor(age/0.24);
+        return mercuryAge;
     }
 
-    venusYears() {
-        let years = this.years;
-        let venusYears = Math.floor(years/0.62);
-        return venusYears;
+    venusAge() {
+        let age = this.age;
+        let venusAge = Math.floor(age/0.62);
+        return venusAge;
     }
 
-    marsYears() {
-        let years = this.years;
-        let marsYears = Math.floor(years/1.88);
-        return marsYears;
+    marsAge() {
+        let age = this.age;
+        let marsAge = Math.floor(age/1.88);
+        return marsAge;
     }
 
-    jupiterYears() {
-        let years = this.years;
-        let jupiterYears = Math.floor(years/11.86);
-        return jupiterYears;
+    jupiterAge() {
+        let age = this.age;
+        let jupiterAge = Math.floor(age/11.86);
+        return jupiterAge;
+    }
+
+
+    lifeExpectancy(gender, continent, planet) {
+        const averageLifeExp = 71.5;
+        let genderFactor;
+        if (gender == "Male") {
+            genderFactor = 0.96;
+        } else if (gender == "Female") {
+            genderFactor = 1.015;
+        }
+
+        let continentFactor;
+        if (continent == "Australia" || continent == "North America") {
+            continentFactor = 1.18;
+        } else if (continent == "Asia" || continent == "South America") {
+            continentFactor = 1.09;
+        } else if (continent == "Europe") {
+            continentFactor = 1.05;
+        } else if (continent == "Africa") {
+            continentFactor = 0.93;
+        }
+        
+        let lifeExpectancy = averageLifeExp*genderFactor;
+        if (planet == "Earth") {
+            lifeExpectancy = lifeExpectancy*continentFactor;
+        } else if (planet == "Mercury") {
+            lifeExpectancy = lifeExpectancy/0.24;
+        } else if (planet == "Venus") {
+            lifeExpectancy = lifeExpectancy/0.62;
+        } else if (planet == "Mars") {
+            lifeExpectancy = lifeExpectancy/1.88;
+        } else if (planet == "Jupiter") {
+            lifeExpectancy = lifeExpectancy/11.86;
+        }
+
+        return Math.floor(lifeExpectancy)
     }
 }

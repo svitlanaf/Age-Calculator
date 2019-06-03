@@ -1,5 +1,6 @@
 body {
-    background-color: white;
+    background-color: #004466;
+    color: white;
   }
 
 .radio input[type="radio"] {
@@ -11,3 +12,4 @@ body {
     display: inline-block;
     width: 300px;
   }
+

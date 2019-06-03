@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Age Calculator</title>
 </head>
 <body>
     <div class="container">
@@ -14,6 +14,23 @@
         <label for="date">Enter Your Birthdate</label>
         <input id='date' name='date' type="date" /><br><br>
 
+        <h4>Select planet</h4>
+        <div class="radio">
+          <label><input type="radio" name="planet" value="Earth">Earth</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="planet" value="Mercury">Mercury</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="planet" value="Venus">Venus</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="planet" value="Mars">Mars</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="planet" value="Jupiter">Jupiter</label>
+        </div><br>
+
         <h4>Select your gender</h4>
       <div class="radio">
         <label><input type="radio" name="gender" value="Male">Male</label>
@@ -22,19 +39,25 @@
         <label><input type="radio" name="gender" value="Female">Female</label>
       </div><br>
 
-        <h4>Select your race</h4>
+        <h4>Select your continent</h4>
       <div class="radio">
-        <label><input type="radio" name="race" value="White">White</label>
+        <label><input type="radio" name="continent" value="Asia">Asia</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="race" value="Black">Black</label>
+        <label><input type="radio" name="continent" value="Africa">Africa</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="race" value="Hispanic">Hispanic</label>
+        <label><input type="radio" name="continent" value="Europe">Europe</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="race" value="Asian">Asian</label>
-      </div><br>
+        <label><input type="radio" name="continent" value="NA">North America</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="continent" value="SA">South America</label>
+        </div>
+    <div class="radio">
+        <label><input type="radio" name="continent" value="Australia">Australia</label>
+        </div><br>
 
       <h4>Select your weight(kg)</h4>
       <div class="radio">
@@ -114,6 +137,10 @@
         </div>
         <button type="submit">Submit</button>
     </form> 
+
+    <div id="answer">
+    </div>
+  
     </div>
 </body>
 </html>

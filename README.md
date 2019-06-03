@@ -9,10 +9,10 @@ _This web application calculates user's age in solar years on different planets.
 
 | Behavior                                                         | Sample Input | Sample Output |
 |------------------------------------------------------------------|--------------|---------------|
-| An application returns user's age in Mercury years.              |              |               |
-| An application returns user's age in Mars years.                 |              |               |
-| An application returns user's age in Venus years.                |              |               |
-| An application returns user's age in Jupiter years.              |              |               |
+| An application returns user's age in Mercury years.              |  05/14/2001  |       75      |
+| An application returns user's age in Mars years.                 |  05/14/2001  |       29      |
+| An application returns user's age in Venus years.                |  05/14/2001  |       9       |
+| An application returns user's age in Jupiter years.              |  05/14/2001  |       1       |
 | An application calculates the user’s life expectancy on Earth.   |              |               |
 | An application calculates the user’s life expectancy on Mercury. |              |               |
 | An application calculates the user’s life expectancy on Mars.    |              |               |
