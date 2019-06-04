@@ -28,11 +28,5 @@ $(function(){
             } 
         $('input[type=checkbox]').prop('checked', false);
         }
-        console.log(calculator.calculatedAge("Earth"));
-        console.log(calculator.calculatedAge("Mercury"));
-        console.log(calculator.calculatedAge("Venus"));
-        console.log(calculator.calculatedAge("Mars"));
-        console.log(calculator.calculatedAge("Jupiter"));
-        
     });
 });
