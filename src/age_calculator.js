@@ -57,6 +57,6 @@ export class SolarAgeCalculator {
             lifeExpectancy = lifeExpectancy/11.86;
         }
 
-        return Math.floor(lifeExpectancy)
+        return Math.floor(lifeExpectancy);
     }
 }
